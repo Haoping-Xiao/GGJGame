@@ -4,9 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - HealthPoint
   - TimePoint
   - Wall
+=======
+  - Anger
+  - momintheroom
+>>>>>>> 8206dfd67ddb2a2d265af82938caf5d3638e26c2
   layers:
   - Default
   - TransparentFX
@@ -43,4 +48,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1564578153
+    locked: 0
+  - name: UI
+    uniqueID: 2229535463
     locked: 0
