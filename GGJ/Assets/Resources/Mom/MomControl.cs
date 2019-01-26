@@ -31,7 +31,10 @@ public class MomControl : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        intervaltime += Time.fixedDeltaTime;
+        if(!StartConversation.startAnswer)
+        {
+            intervaltime += Time.fixedDeltaTime;
+        }        
         if (intervaltime > 3.0f)
         {
             Debug.Log(Time.time);
