@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Answer : MonoBehaviour
 {
+
+
     private int[] correctAnswer = { 1, 1, 2 };
     private int[,] score ={ { 10, -10 }, { 20, -20 }, { -15, 15 } };
 
@@ -12,6 +14,10 @@ public class Answer : MonoBehaviour
     static public int valueOfAngry = 0;
     private int min = 0;
     private int max = 100;
+
+
+
+
     void Update()
     {
         if(StartConversation.startAnswer)
@@ -78,4 +84,6 @@ public class Answer : MonoBehaviour
         }
         
     }
+
+
 }

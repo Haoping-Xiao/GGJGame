@@ -6,13 +6,14 @@ public class doorcontrol : MonoBehaviour
 {
     // Start is called before the first frame update
 
-
     public GameObject momintheroom;
+    public GameObject startconversation;
     void Start()
     {
         momintheroom.SetActive(false);
-        
-        
+        startconversation.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class doorcontrol : MonoBehaviour
 
     public void animstart()
     {
+        startconversation.SetActive(true);
         this.GetComponent<Animator>().SetBool("openanim", true);
     }
 }
