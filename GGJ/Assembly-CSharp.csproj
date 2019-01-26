@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\Arts\男孩and呆毛\testboy.cs" />
+    <Compile Include="Assets\Script\BedroomScript.cs" />
     <Compile Include="Assets\Script\CharactorController.cs" />
     <Compile Include="Assets\Script\CompletePlayerController.cs" />
     <Compile Include="Assets\Script\GameController.cs" />

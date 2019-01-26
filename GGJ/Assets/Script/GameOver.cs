@@ -36,7 +36,9 @@ public class GameOver : MonoBehaviour
 
     IEnumerator resetGame() {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0, 5, -2);
+        StopPlayer(true);
         isGameOver = false;
         isGameStart = false;
         GameController.isHaveHealthBuff = false;

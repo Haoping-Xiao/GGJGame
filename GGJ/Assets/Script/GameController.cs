@@ -15,9 +15,13 @@ public class GameController : MonoBehaviour
     GameObject[] healthTrans = new GameObject[] { };
     GameObject[] TimeTrans = new GameObject[] { };
     int HealthPointNum = 0, TimePointNum = 0;
+    private BedroomScript bedRoomScene;
     // Start is called before the first frame update
     void Start()
     {
+        bedRoomScene = GameObject.Find("Script").GetComponent<BedroomScript>();
+        bedRoomScene.TestCall();
+
         healthTrans = GameObject.FindGameObjectsWithTag("HealthPoint");
         HealthPointNum = healthTrans.Length;
         TimeTrans = GameObject.FindGameObjectsWithTag("TimePoint");
