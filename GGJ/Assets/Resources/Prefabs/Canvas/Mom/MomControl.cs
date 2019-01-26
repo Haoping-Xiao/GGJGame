@@ -43,7 +43,7 @@ public class MomControl : MonoBehaviour {
             intervaltime = 0f;
 
             //妈位置随机
-            int momposrandom = Random.Range(1, 4);
+            int momposrandom = Random.Range(1, 3);
 
             if (momposrandom ==1)
             {
@@ -55,11 +55,7 @@ public class MomControl : MonoBehaviour {
                 this.GetComponent<RectTransform>().position = pos2;
                 Debug.Log("position 2");
             }
-            else
-            {
-                this.GetComponent<RectTransform>().position = pos3;
-                Debug.Log("position 3");
-            }
+           
 
             //妈动作随机
             int momanimrandom = Random.Range(1, 4);

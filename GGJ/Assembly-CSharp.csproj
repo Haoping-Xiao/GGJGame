@@ -53,8 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Resources\Mom\MomControl.cs" />
+     <Compile Include="Assets\Resources\Prefabs\Canvas\Mom\MomControl.cs" />
      <Compile Include="Assets\Scripts\Answer.cs" />
+     <Compile Include="Assets\Scripts\doorcontrol.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\StartConversation.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
