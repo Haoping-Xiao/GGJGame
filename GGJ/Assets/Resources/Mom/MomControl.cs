@@ -12,7 +12,7 @@ public class MomControl : MonoBehaviour {
     public Vector3 pos3;
     public Vector3 angerypos;
 
-    public static float angervalue;
+    
     [Space]
     //位置变化的时间间隔
     public float intervaltime=0f;
@@ -21,7 +21,7 @@ public class MomControl : MonoBehaviour {
 
     void Awake()
     {
-        angervalue = GameObject.FindGameObjectWithTag("Anger").GetComponent<Slider>().value;
+       
     }
     // Use this for initialization
     void Start () {
@@ -31,6 +31,8 @@ public class MomControl : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        GameObject.FindGameObjectWithTag("Anger").GetComponent<Slider>().value = Answer.valueOfAngry;
         if(!StartConversation.startAnswer)
         {
             intervaltime += Time.fixedDeltaTime;
