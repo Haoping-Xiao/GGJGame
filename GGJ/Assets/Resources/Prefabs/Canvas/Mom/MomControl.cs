@@ -9,7 +9,7 @@ public class MomControl : MonoBehaviour {
     //母亲出现的位置
     public Vector3 pos1;
     public Vector3 pos2;
-    public Vector3 pos3;
+
     public Vector3 angerypos;
 
     

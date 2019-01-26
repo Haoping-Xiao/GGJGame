@@ -362,7 +362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {x: 0, y: 0, z: 0}
   pos2: {x: 100, y: 250, z: 0}
-  pos3: {x: 200, y: 200, z: 0}
   angerypos: {x: 0, y: 0, z: 0}
   intervaltime: 0
 --- !u!95 &1526507820

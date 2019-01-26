@@ -175,7 +175,7 @@ RectTransform:
   m_GameObject: {fileID: 2672771190726923640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.2, y: 4.2, z: 1}
+  m_LocalScale: {x: 2.4315586, y: 1.6559862, z: 1}
   m_Children: []
   m_Father: {fileID: 2672771191721405870}
   m_RootOrder: 5
@@ -213,7 +213,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6d6bf323997c9b24b99c9669df7bdfa1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcd106d14f507bf4a98dd7741ca55902, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -323,14 +323,14 @@ RectTransform:
   m_GameObject: {fileID: 2672771191031591661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.5, y: 6.5, z: 1}
+  m_LocalScale: {x: 2.4315586, y: 1.6559862, z: 1}
   m_Children: []
   m_Father: {fileID: 2672771191721405870}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44, y: 76}
+  m_AnchoredPosition: {x: -158, y: -141}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2672771191031591662
@@ -361,7 +361,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9fa5544c0d1bb254fbc106fafce4a14e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3432407059aa77c489433e8c68544985, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -612,14 +612,14 @@ RectTransform:
   m_GameObject: {fileID: 8788168224096395282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.514352, y: 4.0584035, z: 1}
+  m_LocalScale: {x: 8.284572, y: 4.363189, z: 1}
   m_Children: []
   m_Father: {fileID: 2672771191721405870}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325.28, y: -217.46}
+  m_AnchoredPosition: {x: -400, y: -224.726}
   m_SizeDelta: {x: 99.9, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1498279947593642903
@@ -671,9 +671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35996959d45db5449a399ee106deee01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {x: 0, y: 0, z: 0}
-  pos2: {x: 100, y: 250, z: 0}
-  pos3: {x: 200, y: 200, z: 0}
+  pos1: {x: -380, y: 0, z: 0}
+  pos2: {x: 0, y: 0, z: 0}
   angerypos: {x: 0, y: 0, z: 0}
   intervaltime: 0
 --- !u!95 &7529016204731154283
