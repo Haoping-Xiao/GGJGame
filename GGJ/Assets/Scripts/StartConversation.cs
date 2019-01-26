@@ -13,21 +13,21 @@ public class StartConversation : MonoBehaviour
     private int DontAnswer = 20;
     static public bool startAnswer = false;//whether start answer or not
     // Start is called before the first frame update
+
+
     void Start()
     {
         initial = Time.time;
         randomBegin = Random.Range(5, 9);
     }
-
-
     void FixedUpdate()
     {
-       // Debug.Log("time" + Time.time);
-       // Debug.Log("randomBegin" + randomBegin);
+       
         if (Time.time - initial >= randomBegin && !startAnswer)
         {
+            Debug.Log("111");
             UIManager.Instance.ShowPanel("Question");
-            UIManager.Instance.ShowPanel("Answer");
+            UIManager.Instance.ShowPanel("Answer");     
             startAnswer = true;
             startAnswerTime = Time.time;
         }

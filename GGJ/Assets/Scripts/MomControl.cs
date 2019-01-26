@@ -9,20 +9,16 @@ public class MomControl : MonoBehaviour {
     //母亲出现的位置
     public Vector3 pos1;
     public Vector3 pos2;
-
     public Vector3 angerypos;
+    static public int momposrandom;
 
-    
     [Space]
     //位置变化的时间间隔
     public float intervaltime=0f;
 
     Animator Momanim;
 
-    void Awake()
-    {
-       
-    }
+
     // Use this for initialization
     void Start () {
         Momanim = this.GetComponent<Animator>();
@@ -39,23 +35,24 @@ public class MomControl : MonoBehaviour {
         }        
         if (intervaltime > 3.0f)
         {
-            Debug.Log(Time.time);
+            //Debug.Log(Time.time);
             intervaltime = 0f;
 
             //妈位置随机
-            int momposrandom = Random.Range(1, 3);
+            momposrandom = Random.Range(1, 3);
 
             if (momposrandom ==1)
             {
                 this.GetComponent<RectTransform>().position = pos1;
-                Debug.Log("position 1");
+                //Debug.Log("position 1");
             }
             else if (momposrandom ==2)
             {
                 this.GetComponent<RectTransform>().position = pos2;
-                Debug.Log("position 2");
+                //Debug.Log("position 2");
             }
-           
+            
+         
 
             //妈动作随机
             int momanimrandom = Random.Range(1, 4);
@@ -65,21 +62,21 @@ public class MomControl : MonoBehaviour {
                 Momanim.SetBool("one", true);
                 Momanim.SetBool("two", false);
                 Momanim.SetBool("three", false);
-                Debug.Log("anim 1");
+                //Debug.Log("anim 1");
             }
             else if (momanimrandom ==2)
             {
                 Momanim.SetBool("two", true);
                 Momanim.SetBool("one", false);
                 Momanim.SetBool("three", false);
-                Debug.Log("anim 2");
+              //  Debug.Log("anim 2");
             }
             else
             {
                 Momanim.SetBool("three", true);
                 Momanim.SetBool("two", false);
                 Momanim.SetBool("one", false);
-                Debug.Log("anim 3");
+               // Debug.Log("anim 3");
             }
 
         }

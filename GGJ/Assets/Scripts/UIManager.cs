@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class UIManager :Singleton<UIManager>
 {
+
+
+
+
     private string UI_GAMEPANEL_ROOT = "Prefabs/GamePanel/";
 
     public GameObject m_CanvasRoot;
 
     public Dictionary<string, GameObject> m_PanelList = new Dictionary<string, GameObject>();
 
-    Vector3[] Q_position = new Vector3[] { new Vector3(50, 50, 0), Vector3.zero };//position of question
+    Vector3[] Q_position = new Vector3[] { new Vector3(450, 300, 0), new Vector3(150, 300, 0) };//position of question
     string[] quesiton = new string[] { "你有没有女朋友？" ,"你的杯子在哪里","我生气啦"};
     string[,] answer = { { "没有", "有" },{ "桌子上", "书架上" }, { "怎么了","别，我来帮你干活啦" } };
     static public  int LastRandomNum = 0;
@@ -50,7 +54,20 @@ public class UIManager :Singleton<UIManager>
         GameObject panel = Utility.GameObjectRelate.InstantiateGameObject(m_CanvasRoot, loadGo);//实例化
         if(name=="Question")
         {
-            panel.transform.position += Q_position[0];                              //positon of question
+            Debug.Log("MomControl.momposrandom     " + MomControl.momposrandom);
+            if(MomControl.momposrandom==2 || MomControl.momposrandom == 0)
+            {
+                panel.transform.position = Q_position[0];                              //positon of question
+                Debug.Log("panel.transform.position  " + panel.transform.position);
+            }
+            else if(MomControl.momposrandom == 1)
+            {
+                panel.transform.position = Q_position[1];                              //positon of question
+                Debug.Log("panel.transform.position  " + panel.transform.position);
+               
+            }
+           
+          
             GameObject panelText = panel.transform.GetChild(0).gameObject;//get the text
             panelText.GetComponent<Text>().text = quesiton[GetRandomNum()];//give the random question
         }
@@ -59,10 +76,13 @@ public class UIManager :Singleton<UIManager>
             GameObject Choice1 = panel.transform.GetChild(0).gameObject;//get the first choice
             GameObject Choice1Text=Choice1.transform.GetChild(0).gameObject;//get the text of the first choice
             Choice1Text.GetComponent<Text>().text = answer[LastRandomNum, 0];//give the first answer
-
+         
             GameObject Choice2 = panel.transform.GetChild(1).gameObject;//get the second choice
             GameObject Choice2Text = Choice2.transform.GetChild(0).gameObject;//get the text of the second choice
             Choice2Text.GetComponent<Text>().text = answer[LastRandomNum, 1];//give the second answer
+
+
+         
         }
 
         
