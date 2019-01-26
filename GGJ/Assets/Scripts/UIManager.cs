@@ -11,7 +11,7 @@ public class UIManager :Singleton<UIManager>
 
     public Dictionary<string, GameObject> m_PanelList = new Dictionary<string, GameObject>();
 
-    Vector3[] Q_position = new Vector3[] { new Vector3(50, 50, 0), Vector3.zero, Vector3.zero };//position of question
+    Vector3[] Q_position = new Vector3[] { new Vector3(50, 50, 0), Vector3.zero };//position of question
     string[] quesiton = new string[] { "你有没有女朋友？" ,"你的杯子在哪里","我生气啦"};
     string[,] answer = { { "没有", "有" },{ "桌子上", "书架上" }, { "怎么了","别，我来帮你干活啦" } };
     static public  int LastRandomNum = 0;

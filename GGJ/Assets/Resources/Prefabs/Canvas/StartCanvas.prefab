@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 5603918147276153367}
   - component: {fileID: 4787857449044305169}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "\u5446\u6BDBText"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 2010406524859712293}
   - component: {fileID: 7841052944633817278}
   - component: {fileID: 3248204567799571316}
+  - component: {fileID: 7487081627929401220}
   m_Layer: 5
   m_Name: testboy
   m_TagString: Untagged
@@ -434,7 +435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.341187, y: -3.9548035}
+  m_AnchoredPosition: {x: 311, y: -196}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2010406524859712293
@@ -513,6 +514,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7841052944633817278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7487081627929401220}
+        m_MethodName: hairminus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7487081627929401220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487081627929401219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e7af872cba75140a6ecb4ce11ecc24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
