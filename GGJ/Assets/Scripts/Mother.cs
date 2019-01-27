@@ -13,6 +13,10 @@ public class Mother : MonoBehaviour
     public Vector3 angerypos;
     static public int momposrandom;
 
+    public static bool islooking=false;
+
+    float looktime = 0f;
+
     [Space]
     //位置变化的时间间隔
     public float intervaltime = 0f;
@@ -81,6 +85,13 @@ public class Mother : MonoBehaviour
                 // Debug.Log("anim 3");
             }
 
+
+            if(Answer.valueOfAngry>=50)
+            {
+                Momanim.SetBool("peeping", true);
+                islooking = true;
+               
+            }
         }
     }
 }
