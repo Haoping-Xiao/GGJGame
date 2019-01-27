@@ -15,8 +15,8 @@ public class UIManager : Singleton<UIManager>
 
     public Dictionary<string, GameObject> m_PanelList = new Dictionary<string, GameObject>();
 
-    Vector3[] Q_position = new Vector3[] { new Vector3(800, 700, 0), new Vector3(800, 700, 0) };//position of question
-    Vector3 A_position = new Vector3(1000, 250, 0);
+    Vector3[] Q_position = new Vector3[] { new Vector3(450, 300, 0), new Vector3(450, 300, 0) };//position of question
+    Vector3 A_position = new Vector3(350, 100, 0);
     Vector3 Win_position = new Vector3(350, 350, 0);
 
     string[] quesiton = new string[] { "我来扫一扫你房间嗷", "上次考试你考了全班倒数第一这次打算咋办？！", "之前隔壁李阿姨晾的貂皮大衣是你踢球弄脏的吗！" , "这个游戏你不能暂停吗？",

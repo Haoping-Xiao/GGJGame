@@ -25,7 +25,7 @@ public class InSideUIController : MonoBehaviour
         if (Mother.islooking  && !isInDesktop)
         {
             Answer.valueOfAngry = 100;
-            print("OPPPPPPPPPPPPPPS");
+            //print("OPPPPPPPPPPPPPPS");
         }
 
         if (GameOver.isGameOver) {

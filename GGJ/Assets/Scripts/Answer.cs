@@ -19,7 +19,8 @@ public class Answer : MonoBehaviour
     static public int valueOfAngry = 0;
     private int min = 0;
     private int max = 100;
-
+    private float duration = 1.0f;
+    private float count = 0;
 
 
     void Start()
@@ -32,6 +33,15 @@ public class Answer : MonoBehaviour
     {
         GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
         ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
+        Debug.Log("Answer.valueOfAngry     " + Answer.valueOfAngry);
+        Debug.Log("!StartConversation.IsOver   " + !StartConversation.IsOver);
+        if (Answer.valueOfAngry >= 100 && !StartConversation.IsOver)
+        {
+            StartConversation.IsOver = true;
+            StartCoroutine(delay());
+            
+        }
+
         if (StartConversation.startAnswer)
         {
             if (GameObject.Find("Conversation/Answer/Choice1") != null) {
@@ -48,8 +58,14 @@ public class Answer : MonoBehaviour
             }
         }
 
+
     }
 
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(5);
+        GameObject over1 = Instantiate(over);
+    }
     void btn1Click()
     {
         if (StartConversation.startAnswer)
@@ -71,17 +87,13 @@ public class Answer : MonoBehaviour
             GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
             ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
             session.GetComponent<StartConversation>().Close();//停止回答
+
             if (StartConversation.question_num == StartConversation.limit_num)
             {
                 StartConversation.IsWin = true;
                 GameObject win1 = Instantiate(win);
             }
-            if (Answer.valueOfAngry >= 100 && !StartConversation.IsOver)
-            {
-                StartConversation.IsOver = true;
 
-                GameObject over1 = Instantiate(over);
-            }
         }
 
 
@@ -109,16 +121,11 @@ public class Answer : MonoBehaviour
             GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
             ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
             session.GetComponent<StartConversation>().Close();//停止回答
+
             if (StartConversation.question_num == StartConversation.limit_num)
             {
                 StartConversation.IsWin = true;
                 GameObject win1 = Instantiate(win);
-            }
-            if (Answer.valueOfAngry >= 100 && !StartConversation.IsOver)
-            {
-                StartConversation.IsOver = true;
-                
-                GameObject over1 = Instantiate(over);
             }
         }
 
