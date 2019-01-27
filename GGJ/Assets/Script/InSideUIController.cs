@@ -21,6 +21,11 @@ public class InSideUIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //if (Mother.isLooking && isInDesktop) {
+        //    Answer.valueOfAngry = 100;
+        //}
+
         if (GameOver.isGameOver) {
             showGamover();
             StartCoroutine(hideGameover());
