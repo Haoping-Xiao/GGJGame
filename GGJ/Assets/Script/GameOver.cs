@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public static bool isGameOver = false;
     public static bool isGameStart = false;
-    public bool ishairminus = false;
+    public static bool ishairminus = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,10 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (isGameOver) {
-          if(ishairminus==false)
+          if(!ishairminus)
             {
-                hairminus();
                 ishairminus = true;
+                hairminus();
             }
             StartCoroutine(resetGame());
           
@@ -68,6 +68,6 @@ public class GameOver : MonoBehaviour
 
     public void hairminus()
     {
-        BoyControl.hairstate--;
+        BoyControl.hairstate-=1;
     }
 }

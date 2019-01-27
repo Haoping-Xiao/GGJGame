@@ -21,8 +21,9 @@ public class BoyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        this.GetComponent<Image>().sprite = frontheads[hairstate];
+        print(hairstate);
+        if(hairstate>=0&&hairstate<=frontheads.Length)
+            this.GetComponent<Image>().sprite = frontheads[hairstate];
         
     }
 }
