@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static bool IsFirstPlay = true;
     public float HealthBuffNewTime = 1f;
     public float TimeBuffNewTime = 10f;
     public static float HappniessPerBuff = 0.8f;

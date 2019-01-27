@@ -56,8 +56,11 @@ public class InSideUIController : MonoBehaviour
         if (GameObject.Find("room") != null)
         {
             //----------------------------------------------------------
-            //这里需要调用卧室里进程开始的函数（就是妈妈开始进来）           
-            GameObject.Find("room").GetComponent<doorcontrol>().animstart();
+            //这里需要调用卧室里进程开始的函数（就是妈妈开始进来）
+            if (GameController.IsFirstPlay) {
+                GameController.IsFirstPlay = false;
+                GameObject.Find("room").GetComponent<doorcontrol>().animstart();
+            }
             //----------------------------------------------------------
         }
         else {
