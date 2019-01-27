@@ -6,8 +6,12 @@ public class Answer : MonoBehaviour
 {
 
 
-    private int[] correctAnswer = { 1, 1, 2 };
-    private int[,] score ={ { 10, -10 }, { 20, -20 }, { -15, 15 } };
+    private int[] correctAnswer = { 2, 2, 1 ,2, 1,
+                                    1, 2, 2, 2, 1,
+                                    1, 2, 1, 2, 2};
+    private int[,] score ={ { -20, 0 }, { -10, 20 }, { 10, -10 }, { -10, 10 }, { 10, -20 },
+                            {-10, -20}, {-10, 10 }, {-30, 30 }, {-20, 20}, { 10, -10},
+                            {20, -20},  {-10, 10 }, {-10,-20 }, { -10,10}, {-10, 10 } };
 
 
     public GameObject session;
@@ -20,7 +24,7 @@ public class Answer : MonoBehaviour
 
     void Update()
     {
-        if(StartConversation.startAnswer)
+        if (StartConversation.startAnswer)
         {
             GameObject Choice1 = GameObject.Find("Conversation/Answer/Choice1");
             Button btn1 = (Button)Choice1.GetComponent<Button>();
@@ -35,7 +39,7 @@ public class Answer : MonoBehaviour
 
     void btn1Click()
     {
-        if(StartConversation.startAnswer)
+        if (StartConversation.startAnswer)
         {
             if (correctAnswer[UIManager.LastRandomNum] == 1)
             {//回答正确
@@ -61,7 +65,7 @@ public class Answer : MonoBehaviour
 
     void btn2Click()
     {
-        if(StartConversation.startAnswer)
+        if (StartConversation.startAnswer)
         {
 
             if (correctAnswer[UIManager.LastRandomNum] == 2)
@@ -82,7 +86,7 @@ public class Answer : MonoBehaviour
             ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
             session.GetComponent<StartConversation>().Close();//停止回答
         }
-        
+
     }
 
 
