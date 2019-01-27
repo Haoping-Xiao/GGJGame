@@ -59,6 +59,21 @@ public class GameOver : MonoBehaviour
         
     }
 
+
+    public static void  ResetInsideGame() {
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0, 5, -2);
+        //StopPlayer(true);
+
+        isGameOver = false;
+        isGameStart = false;
+        GameController.isHaveHealthBuff = false;
+        GameController.isHaveTimeBuff = false;
+        GameController.currentHealthTime = 0;
+        GameController.currentTimeTime = 0;
+        CharactorController.Happyness = 1;
+        CharactorController.Emission = 1;
+    }
+
     public void StartGame() {
         isGameOver = false;
         isGameStart = true;

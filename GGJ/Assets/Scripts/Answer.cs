@@ -24,15 +24,22 @@ public class Answer : MonoBehaviour
 
     void Update()
     {
+        GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
+        ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
         if (StartConversation.startAnswer)
         {
-            GameObject Choice1 = GameObject.Find("Conversation/Answer/Choice1");
-            Button btn1 = (Button)Choice1.GetComponent<Button>();
-            btn1.onClick.AddListener(btn1Click);
+            if (GameObject.Find("Conversation/Answer/Choice1") != null) {
+                GameObject Choice1 = GameObject.Find("Conversation/Answer/Choice1");
+                Button btn1 = (Button)Choice1.GetComponent<Button>();
+                btn1.onClick.AddListener(btn1Click);
+            }
 
-            GameObject Choice2 = GameObject.Find("Conversation/Answer/Choice2");
-            Button btn2 = (Button)Choice2.GetComponent<Button>();
-            btn2.onClick.AddListener(btn2Click);
+            if (GameObject.Find("Conversation/Answer/Choice2") != null)
+            {
+                GameObject Choice2 = GameObject.Find("Conversation/Answer/Choice2");
+                Button btn2 = (Button)Choice2.GetComponent<Button>();
+                btn2.onClick.AddListener(btn2Click);
+            }
         }
 
     }

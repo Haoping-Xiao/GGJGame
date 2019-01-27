@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\GroundController.cs" />
     <Compile Include="Assets\Script\HealthBuff.cs" />
     <Compile Include="Assets\Script\InsideCamController.cs" />
+    <Compile Include="Assets\Script\InsideGame.cs" />
     <Compile Include="Assets\Script\InSideUIController.cs" />
     <Compile Include="Assets\Script\RotateController.cs" />
     <Compile Include="Assets\Script\TimeBuff.cs" />

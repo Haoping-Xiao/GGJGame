@@ -22,7 +22,6 @@ public class BoyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("islooking  " +Mother.islooking);
         if (Mother.islooking)
         {
             transform.GetChild(0).gameObject.SetActive(true);

@@ -13,7 +13,7 @@ public class Mother : MonoBehaviour
     public Vector3 angerypos;
     static public int momposrandom;
 
-    public static bool islooking=false;
+    public static bool islooking = false;
 
     float looktime = 0f;
 
@@ -86,12 +86,34 @@ public class Mother : MonoBehaviour
             }
 
 
-            if(Answer.valueOfAngry>=50)
+
+            if (Answer.valueOfAngry == 50||Answer.valueOfAngry==60)
             {
                 Momanim.SetBool("peeping", true);
                 islooking = true;
+                Invoke("Stoplooking", 5.0f);
+            }
+
+
+            if (Answer.valueOfAngry >= 100)
+            {
+                Momanim.SetBool("pointing", true);
+                Momanim.SetBool("ispoint", true);
                
             }
         }
+        }
+
+    
+    void Stoplooking()
+    {
+        Answer.valueOfAngry -=30;
+        Momanim.SetBool("peeping", false);
+        islooking = false;
+        
     }
+
+
 }
+
+
