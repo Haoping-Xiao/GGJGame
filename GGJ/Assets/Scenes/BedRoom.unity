@@ -1212,6 +1212,32 @@ PrefabInstance:
       propertyPath: win
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5298171564048848447, guid: ca9008d7b7f991d408c931f66e1c0122,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298171564048848447, guid: ca9008d7b7f991d408c931f66e1c0122,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298171564048848447, guid: ca9008d7b7f991d408c931f66e1c0122,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298171564048848447, guid: ca9008d7b7f991d408c931f66e1c0122,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298171563502362336, guid: ca9008d7b7f991d408c931f66e1c0122,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b9613ceb04a6790408f451b3a23021cb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9008d7b7f991d408c931f66e1c0122, type: 3}
 --- !u!1 &1348769474

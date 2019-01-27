@@ -9,7 +9,7 @@ public class BoyControl : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     public Sprite[] frontheads;
-    public float HairNewTime = 2    0f;
+    public float HairNewTime = 20f;
     float currentTime = 0;
     public static int hairstate=3;
     public AudioClip mao;

@@ -60,6 +60,7 @@ public class StartConversation : MonoBehaviour
                 if (question_num == limit_num )
                 {
                     IsWin = true;
+                   
                     //win.SetActive(true);
                     GameObject win1 = Instantiate(win);
                 }
