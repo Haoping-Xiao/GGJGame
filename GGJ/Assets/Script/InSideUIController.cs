@@ -22,7 +22,7 @@ public class InSideUIController : MonoBehaviour
     void Update()
     {
 
-        //if (Mother.isLooking && isInDesktop) {
+        //if (Mother.islooking && isInDesktop) {
         //    Answer.valueOfAngry = 100;
         //}
 
