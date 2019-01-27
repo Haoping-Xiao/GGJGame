@@ -10,9 +10,11 @@ public class InSideUIController : MonoBehaviour
     public GameObject GameoverUI;
     public GameObject StartButtonUI;
     public GameObject WinUI;
+    
     // Start is called before the first frame update
     void Start()
     {
+       
         StartButtonUI.GetComponent<Button>().onClick.AddListener(delegate { StartBedroom("Hello"); });
     }
 
@@ -52,10 +54,10 @@ public class InSideUIController : MonoBehaviour
     void StartBedroom(string message)
     {
         if (GameObject.Find("room") != null)
-        {  
+        {
             //----------------------------------------------------------
-            //这里需要调用卧室里进程开始的函数（就是妈妈开始进来）
-                GameObject.Find("room").GetComponent<doorcontrol>().animstart();
+            //这里需要调用卧室里进程开始的函数（就是妈妈开始进来）           
+            GameObject.Find("room").GetComponent<doorcontrol>().animstart();
             //----------------------------------------------------------
         }
         else {

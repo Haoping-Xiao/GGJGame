@@ -15,7 +15,7 @@ public class UIManager :Singleton<UIManager>
 
     public Dictionary<string, GameObject> m_PanelList = new Dictionary<string, GameObject>();
 
-    Vector3[] Q_position = new Vector3[] { new Vector3(450, 300, 0), new Vector3(150, 300, 0) };//position of question
+    Vector3[] Q_position = new Vector3[] { new Vector3(450, 300, 0), new Vector3(100, 300, 0) };//position of question
     string[] quesiton = new string[] { "你有没有女朋友？" ,"你的杯子在哪里","我生气啦"};
     string[,] answer = { { "没有", "有" },{ "桌子上", "书架上" }, { "怎么了","别，我来帮你干活啦" } };
     static public  int LastRandomNum = 0;
@@ -54,15 +54,15 @@ public class UIManager :Singleton<UIManager>
         GameObject panel = Utility.GameObjectRelate.InstantiateGameObject(m_CanvasRoot, loadGo);//实例化
         if(name=="Question")
         {
-            Debug.Log("MomControl.momposrandom     " + MomControl.momposrandom);
-            if(MomControl.momposrandom==2 || MomControl.momposrandom == 0)
-            {
-                panel.transform.position = Q_position[0];                              //positon of question
-                Debug.Log("panel.transform.position  " + panel.transform.position);
-            }
-            else if(MomControl.momposrandom == 1)
+           Debug.Log("Mother.momposrandom " + Mother.momposrandom);
+            if(Mother.momposrandom==2)
             {
                 panel.transform.position = Q_position[1];                              //positon of question
+                Debug.Log("panel.transform.position  " + panel.transform.position);
+            }
+            else if(Mother.momposrandom == 1|| Mother.momposrandom == 0)
+            {
+                panel.transform.position = Q_position[0];                              //positon of question
                 Debug.Log("panel.transform.position  " + panel.transform.position);
                
             }

@@ -11,7 +11,7 @@ public class MomControl : MonoBehaviour {
     public Vector3 pos2;
     public Vector3 angerypos;
     static public int momposrandom;
-
+    static public int pos;
     [Space]
     //位置变化的时间间隔
     public float intervaltime=0f;
@@ -29,10 +29,12 @@ public class MomControl : MonoBehaviour {
     {
 
         GameObject.FindGameObjectWithTag("Anger").GetComponent<Slider>().value = Answer.valueOfAngry;
+        Debug.Log("StartConversation.startAnswer  " + StartConversation.startAnswer);
         if(!StartConversation.startAnswer)
         {
             intervaltime += Time.fixedDeltaTime;
-        }        
+        }
+        Debug.Log("intervaltime   " + intervaltime);
         if (intervaltime > 3.0f)
         {
             //Debug.Log(Time.time);
@@ -40,15 +42,19 @@ public class MomControl : MonoBehaviour {
 
             //妈位置随机
             momposrandom = Random.Range(1, 3);
-
+            Debug.Log("momposrandom    "+ momposrandom);
             if (momposrandom ==1)
             {
-                this.GetComponent<RectTransform>().position = pos1;
+                Debug.Log("1号位");
+                this.GetComponent<RectTransform>().position = pos2;
+                pos = 2;
                 //Debug.Log("position 1");
             }
             else if (momposrandom ==2)
             {
+                Debug.Log("2号位");
                 this.GetComponent<RectTransform>().position = pos2;
+                pos = 2;
                 //Debug.Log("position 2");
             }
             

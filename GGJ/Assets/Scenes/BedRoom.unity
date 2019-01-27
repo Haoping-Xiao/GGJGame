@@ -434,6 +434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2672771191423296562, guid: 53a06d4af52920745bfa02bb5af4bdc8,
+        type: 3}
+      propertyPath: startconversation
+      value: 
+      objectReference: {fileID: 586724977}
     - target: {fileID: 2672771191721405870, guid: 53a06d4af52920745bfa02bb5af4bdc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -569,11 +574,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -175
       objectReference: {fileID: 0}
-    - target: {fileID: 2672771191423296562, guid: 53a06d4af52920745bfa02bb5af4bdc8,
-        type: 3}
-      propertyPath: startconversation
-      value: 
-      objectReference: {fileID: 586724977}
     - target: {fileID: 5538354305909102980, guid: 53a06d4af52920745bfa02bb5af4bdc8,
         type: 3}
       propertyPath: m_Sprite
@@ -584,6 +584,16 @@ PrefabInstance:
         type: 3}
       propertyPath: pos1.x
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672771190726923640, guid: 53a06d4af52920745bfa02bb5af4bdc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672771190726923621, guid: 53a06d4af52920745bfa02bb5af4bdc8,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1176409013319027733, guid: 53a06d4af52920745bfa02bb5af4bdc8, type: 3}
@@ -897,8 +907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f4d0221950bc94b901c2383fd3727a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {x: 300, y: 0, z: 0}
-  pos2: {x: 0, y: 0, z: 0}
+  pos1: {x: 500, y: 0, z: 0}
+  pos2: {x: 100, y: 0, z: 0}
   angerypos: {x: 0, y: 0, z: 0}
   intervaltime: 0
 --- !u!1 &1612207484

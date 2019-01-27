@@ -10,10 +10,8 @@ public class doorcontrol : MonoBehaviour
     public GameObject startconversation;
     void Start()
     {
-        momintheroom.SetActive(false);
         startconversation.SetActive(false);
-
-
+        momintheroom.SetActive(false);
     }
 
     // Update is called once per frame
