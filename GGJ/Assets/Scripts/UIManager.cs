@@ -17,6 +17,8 @@ public class UIManager : Singleton<UIManager>
 
     Vector3[] Q_position = new Vector3[] { new Vector3(450, 300, 0), new Vector3(100, 300, 0) };//position of question
     Vector3 A_position = new Vector3(400, 100, 0);
+    Vector3 Win_position = new Vector3(350, 350, 0);
+
     string[] quesiton = new string[] { "我来扫一扫你房间嗷", "上次考试你考了全班倒数第一这次打算咋办？！", "之前隔壁李阿姨晾的貂皮大衣是你踢球弄脏的吗！" , "这个游戏你不能暂停吗？",
                                        "我和你爸同时掉河里，你先救谁？","你是不又找女朋友了？" ,"你也别闲着，去帮我浇一下花呀？","啊！那有一只蟑螂，快帮我把它抓走！",
                                        "突然想起今天我还没有偷菜，你赶快帮我去偷菜！","今天你想吃饺子还是肯德基？","班主任说你上课总跟朱戈说话，你有啥解释的吗！","你寒假作业做好了吗？",
@@ -80,6 +82,14 @@ public class UIManager : Singleton<UIManager>
 
             GameObject panelText = panel.transform.GetChild(0).gameObject;//get the text
             panelText.GetComponent<Text>().text = quesiton[GetRandomNum()];//give the random question
+        }
+        else if (name == "YouWin")
+        {
+            panel.transform.position = Win_position;
+        }
+        else if (name == "GameOver")
+        {
+            panel.transform.position = Win_position;
         }
         else
         {

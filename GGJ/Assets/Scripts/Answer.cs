@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class Answer : MonoBehaviour
 {
 
-
+    private GameObject over;
+    private GameObject win;
     private int[] correctAnswer = { 2, 2, 1 ,2, 1,
                                     1, 2, 2, 2, 1,
                                     1, 2, 1, 2, 2};
@@ -21,7 +22,12 @@ public class Answer : MonoBehaviour
 
 
 
+    void Start()
+    {
+        over = Resources.Load("Prefabs/GamePanel/EndCanvas") as GameObject;
+        win = Resources.Load("Prefabs/GamePanel/Win") as GameObject;
 
+    }
     void Update()
     {
         if (StartConversation.startAnswer)
@@ -58,6 +64,17 @@ public class Answer : MonoBehaviour
             GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
             ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
             session.GetComponent<StartConversation>().Close();//停止回答
+            if (StartConversation.question_num == StartConversation.limit_num)
+            {
+                StartConversation.IsWin = true;
+                GameObject win1 = Instantiate(win);
+            }
+            if (Answer.valueOfAngry == 100 && !StartConversation.IsOver)
+            {
+                StartConversation.IsOver = true;
+
+                GameObject over1 = Instantiate(over);
+            }
         }
 
 
@@ -85,6 +102,17 @@ public class Answer : MonoBehaviour
             GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
             ValueText.GetComponent<Text>().text = "愤怒值：" + valueOfAngry;
             session.GetComponent<StartConversation>().Close();//停止回答
+            if (StartConversation.question_num == StartConversation.limit_num)
+            {
+                StartConversation.IsWin = true;
+                GameObject win1 = Instantiate(win);
+            }
+            if (Answer.valueOfAngry == 100 && !StartConversation.IsOver)
+            {
+                StartConversation.IsOver = true;
+                
+                GameObject over1 = Instantiate(over);
+            }
         }
 
     }
