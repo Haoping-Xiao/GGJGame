@@ -39,7 +39,7 @@ public class BoyControl : MonoBehaviour
                 addHair();
                 currentTime = 0;
             }
-            print(hairstate);
+            //print(hairstate);
             if (hairstate >= 0 && hairstate <= frontheads.Length)
                 this.GetComponent<Image>().sprite = frontheads[hairstate];
 

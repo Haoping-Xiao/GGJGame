@@ -21,7 +21,7 @@ public class CharactorController : MonoBehaviour
     void Update()
     {
         // print(GetComponent<Rigidbody>().velocity.x + GetComponent<Rigidbody>().velocity.y + GetComponent<Rigidbody>().velocity.z);
-        print(IsOnGround);
+       // print(IsOnGround);
         if (IsOnGround)
         {
             gameObject.GetComponent<AudioSource>().volume = 0.2f * Mathf.Abs(GetComponent<Rigidbody>().velocity.x + GetComponent<Rigidbody>().velocity.y + GetComponent<Rigidbody>().velocity.z);

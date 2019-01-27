@@ -31,7 +31,7 @@ public class GameOver : MonoBehaviour
     {
         if (other.tag == "Player") {
             isGameOver = true;
-            print("Game over");
+            //print("Game over");
         }
     }
 
