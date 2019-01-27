@@ -16,7 +16,7 @@ public class Answer : MonoBehaviour
 
 
     public GameObject session;
-    static public int valueOfAngry = 0;
+    static public int valueOfAngry = 40;
     private int min = 0;
     private int max = 100;
 

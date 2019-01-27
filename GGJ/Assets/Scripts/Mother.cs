@@ -31,7 +31,7 @@ public class Mother : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         GameObject.FindGameObjectWithTag("Anger").GetComponent<Slider>().value = Answer.valueOfAngry;
@@ -88,14 +88,25 @@ public class Mother : MonoBehaviour
 
 
 
-            if (Answer.valueOfAngry == 50||Answer.valueOfAngry==60)
+            if (Answer.valueOfAngry >= 50 && Answer.valueOfAngry < 100)
             {
                 Momanim.SetBool("peeping", true);
-                islooking = true;
-                Invoke("Stoplooking", 5.0f);
+                
+                StartCoroutine(lookingwithdelay());
+
+                if (islooking) {
+                    if (InSideUIController.isInDesktop)
+                    {
+                        StartCoroutine(Stoplooking());
+                    }
+                    else
+                    {
+                        Answer.valueOfAngry = 100;
+                        print("OPPPPPPPPPPPPPPS");
+                    }
+                }
             }
-
-
+            
             if (Answer.valueOfAngry >= 100)
             {
                 Momanim.SetBool("pointing", true);
@@ -105,14 +116,30 @@ public class Mother : MonoBehaviour
         }
         }
 
-    
-    void Stoplooking()
-    {
-        Answer.valueOfAngry -=30;
+
+
+    IEnumerator Stoplooking() {
+        yield return new WaitForSeconds(3);
+        print("leave");
+        Answer.valueOfAngry -= 30;
         Momanim.SetBool("peeping", false);
         islooking = false;
-        
+
     }
+
+    IEnumerator lookingwithdelay()
+    {
+        yield return new WaitForSeconds(1);
+        islooking = true;
+    }
+    //void Stoplooking()
+    //{
+    //    print("leave");
+    //    Answer.valueOfAngry -=30;
+    //    Momanim.SetBool("peeping", false);
+    //    islooking = false;
+
+    //}
 
 
 }

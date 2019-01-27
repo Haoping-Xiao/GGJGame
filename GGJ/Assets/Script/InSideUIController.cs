@@ -22,11 +22,6 @@ public class InSideUIController : MonoBehaviour
     void Update()
     {
 
-        if (Mother.islooking  && !isInDesktop)
-        {
-            Answer.valueOfAngry = 100;
-            print("OPPPPPPPPPPPPPPS");
-        }
 
         if (GameOver.isGameOver) {
             showGamover();

@@ -15,7 +15,7 @@ public class StartConversation : MonoBehaviour
     static public int question_num = 0;
     static public bool IsWin = false;
     static public bool IsOver = false;
-    static public int limit_num = 5;
+    static public int limit_num = 10;
     private GameObject over;
     private GameObject win;
     // Start is called before the first frame update

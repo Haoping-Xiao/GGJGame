@@ -1020,6 +1020,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8107979604955099728, guid: 96a1aa28813222c4b86d3a8be3e8ace7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8107979605918672017, guid: 96a1aa28813222c4b86d3a8be3e8ace7,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1030,10 +1035,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8107979605777141905, guid: 96a1aa28813222c4b86d3a8be3e8ace7,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8107979605253544879, guid: 96a1aa28813222c4b86d3a8be3e8ace7,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a1aa28813222c4b86d3a8be3e8ace7, type: 3}
