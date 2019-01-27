@@ -11,6 +11,8 @@ public class BoyControl : MonoBehaviour
     public Sprite[] frontheads;
 
     public static int hairstate=3;
+    public AudioClip mao;
+
     void Start()
     {
         
@@ -19,6 +21,7 @@ public class BoyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         this.GetComponent<Image>().sprite = frontheads[hairstate];
         
     }

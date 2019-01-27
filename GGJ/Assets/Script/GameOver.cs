@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public static bool isGameOver = false;
     public static bool isGameStart = false;
+    public bool ishairminus = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,13 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (isGameOver) {
+          if(ishairminus==false)
+            {
+                hairminus();
+                ishairminus = true;
+            }
             StartCoroutine(resetGame());
+          
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -39,6 +46,7 @@ public class GameOver : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0, 5, -2);
         StopPlayer(true);
+
         isGameOver = false;
         isGameStart = false;
         GameController.isHaveHealthBuff = false;
@@ -47,11 +55,19 @@ public class GameOver : MonoBehaviour
         GameController.currentTimeTime = 0;
         CharactorController.Happyness = 1;
         CharactorController.Emission = 1;
+
+        
     }
 
     public void StartGame() {
         isGameOver = false;
         isGameStart = true;
         StopPlayer(false);
+        ishairminus = false;
+    }
+
+    public void hairminus()
+    {
+        BoyControl.hairstate--;
     }
 }
