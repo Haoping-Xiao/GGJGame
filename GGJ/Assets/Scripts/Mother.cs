@@ -35,6 +35,7 @@ public class Mother : MonoBehaviour
     {
 
         GameObject.FindGameObjectWithTag("Anger").GetComponent<Slider>().value = Answer.valueOfAngry;
+
         if (!StartConversation.startAnswer)
         {
             intervaltime += Time.fixedDeltaTime;

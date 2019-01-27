@@ -76,7 +76,7 @@ public class Answer : MonoBehaviour
                 StartConversation.IsWin = true;
                 GameObject win1 = Instantiate(win);
             }
-            if (Answer.valueOfAngry == 100 && !StartConversation.IsOver)
+            if (Answer.valueOfAngry >= 100 && !StartConversation.IsOver)
             {
                 StartConversation.IsOver = true;
 
@@ -114,7 +114,7 @@ public class Answer : MonoBehaviour
                 StartConversation.IsWin = true;
                 GameObject win1 = Instantiate(win);
             }
-            if (Answer.valueOfAngry == 100 && !StartConversation.IsOver)
+            if (Answer.valueOfAngry >= 100 && !StartConversation.IsOver)
             {
                 StartConversation.IsOver = true;
                 

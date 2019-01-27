@@ -49,6 +49,7 @@ public class StartConversation : MonoBehaviour
 
         if (startAnswer)
         {
+            
             if (Time.time - startAnswerTime >= answerDuration)//the question is over
             {
                 GameObject ValueText = GameObject.Find("Conversation/ValueOfAngry/Text");
@@ -62,7 +63,7 @@ public class StartConversation : MonoBehaviour
                     //win.SetActive(true);
                     GameObject win1 = Instantiate(win);
                 }
-                if (Answer.valueOfAngry == 100 && !IsOver)
+                if (Answer.valueOfAngry >= 100 && !IsOver)
                 {
                     IsOver = true;
                     //over.SetActive(true);
