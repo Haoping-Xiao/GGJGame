@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class BedroomScript : MonoBehaviour
 {
+    [Header("InsideGame")]
+    public string LoadLevelName = "InsideGame";
     void Awake()
     {
         DontDestroyOnLoad(this);
+        SceneManager.LoadSceneAsync(LoadLevelName, LoadSceneMode.Additive);
     }
     public void TestCall()
     {
