@@ -71,8 +71,11 @@
      <Compile Include="Assets\Scripts\Answer.cs" />
      <Compile Include="Assets\Scripts\BoyControl.cs" />
      <Compile Include="Assets\Scripts\doorcontrol.cs" />
+     <Compile Include="Assets\Scripts\IrregularButton.cs" />
      <Compile Include="Assets\Scripts\MomControl.cs" />
      <Compile Include="Assets\Scripts\Mother.cs" />
+     <Compile Include="Assets\Scripts\PlaySound.cs" />
+     <Compile Include="Assets\Scripts\Restart.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\StartConversation.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />

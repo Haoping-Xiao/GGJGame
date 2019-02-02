@@ -13,8 +13,6 @@ public class Mother : MonoBehaviour
     public Vector3 angerypos;
     static public int momposrandom;
 
-    public static bool islooking = false;
-
     float looktime = 0f;
 
     [Space]
@@ -23,7 +21,7 @@ public class Mother : MonoBehaviour
 
     Animator Momanim;
 
-
+    
     // Use this for initialization
     void Start()
     {
@@ -91,7 +89,6 @@ public class Mother : MonoBehaviour
             if (Answer.valueOfAngry >= 50 && Answer.valueOfAngry < 100)
             {
                 Momanim.SetBool("peeping", true);
-                
                 StartCoroutine(lookingwithdelay());
 
                 if (islooking) {
@@ -102,7 +99,7 @@ public class Mother : MonoBehaviour
                     else
                     {
                         Answer.valueOfAngry = 100;
-                        print("OPPPPPPPPPPPPPPS");
+                       // print("OPPPPPPPPPPPPPPS");
                     }
                 }
             }
@@ -120,7 +117,6 @@ public class Mother : MonoBehaviour
 
     IEnumerator Stoplooking() {
         yield return new WaitForSeconds(3);
-        print("leave");
         Answer.valueOfAngry -= 30;
         Momanim.SetBool("peeping", false);
         islooking = false;
@@ -132,14 +128,7 @@ public class Mother : MonoBehaviour
         yield return new WaitForSeconds(1);
         islooking = true;
     }
-    //void Stoplooking()
-    //{
-    //    print("leave");
-    //    Answer.valueOfAngry -=30;
-    //    Momanim.SetBool("peeping", false);
-    //    islooking = false;
 
-    //}
 
 
 }
